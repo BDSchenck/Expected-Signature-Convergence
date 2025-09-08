@@ -33,7 +33,7 @@ The breakthrough lies in the **segment-stationarity assumption**, which enables 
 |-----------------|----------------------|----------------------|-------------------------|
 | Slow Reversion, Low Volatility | **+10%** | **+9%** | p < 0.001 |
 | Slow Reversion, High Volatility | **+32%** | **+15%** | p < 0.001 |
-| Fast Reversion Regimes | Marginal decline | No Speedup | Not significant |
+| Fast Reversion Regimes | Marginal decline | No speedup | Not significant |
 
 ### Convergence Rate Validation
 - **Log-log MSE-versus-N slopes**: -1.86 to -3.61 across all parameter regimes
