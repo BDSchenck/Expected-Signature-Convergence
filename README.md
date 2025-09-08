@@ -96,12 +96,6 @@ min_{θ,μ,σ} ||S_emp - E[S^{(M)}(X(θ,μ,σ))]||²
 - **Segment-stationarity framework** applicable to mean-reverting processes in finance
 - **Complete mathematical treatment** of bias-variance trade-offs under serial dependence
 
-### Practical Applications  
-- **Interest rate modeling**: Direct application to Vasicek-type models
-- **Foreign exchange**: Parameter estimation for mean-reverting currency dynamics
-- **Commodity pricing**: Calibration of mean-reverting spot price models
-- **Risk management**: Model validation through convergence rate analysis
-
 ## Experimental Validation
 
 ### Rigorous Statistical Design
