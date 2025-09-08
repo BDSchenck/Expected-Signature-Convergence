@@ -126,7 +126,6 @@ Four economically motivated parameter configurations:
 ### Hardware Requirements
 Modern Nvidia GPU with at least 8GB memory essential for:
 - Higher-order signature computations (M=4, d=2 → 31-dimensional tensors)
-- Large-scale Monte Carlo simulations (up to 1000 replications)  
 - Parallel hyperparameter optimization across K values
 - GPU acceleration reduces computation time from years to hours
 
