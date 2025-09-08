@@ -1,0 +1,129 @@
+# Experiment Configuration File
+# This file centralizes all experiment parameters for reproducibility
+
+# Default values applied to all experiments unless overridden
+defaults:
+  monte_carlo_sims: 1000
+  random_seed: 42
+  device: "auto"  # auto, cpu, or cuda
+  save_results: true
+  plot_results: true
+  verbose: true
+
+# Path and signature parameters
+path_parameters:
+  dimension: 2
+  dt: 0.01
+  signature_depth: 4
+
+# Common parameter regimes used across experiments
+parameter_regimes:
+  slow_reversion_low_volatility:
+    theta: 0.05
+    mu: 0.0
+    sigma: 0.1
+    name: "Slow Reversion, Low Volatility"
+  
+  fast_reversion_low_volatility:
+    theta: 0.5
+    mu: 0.0
+    sigma: 0.1
+    name: "Fast Reversion, Low Volatility"
+  
+  slow_reversion_high_volatility:
+    theta: 0.05
+    mu: 0.0
+    sigma: 0.5
+    name: "Slow Reversion, High Volatility"
+  
+  fast_reversion_high_volatility:
+    theta: 0.5
+    mu: 0.0
+    sigma: 0.5
+    name: "Fast Reversion, High Volatility"
+
+# Experiment-specific configurations
+experiments:
+  
+  sanity_check:
+    description: "Validate analytical framework using full range expected signature"
+    n_paths: 10000
+    T: 5.0
+    monte_carlo_sims: 1000
+    N_values: [8, 11, 16, 22, 32, 45, 64, 90, 128]
+    use_full_range: true
+    regimes: ["slow_reversion_low_volatility", "fast_reversion_low_volatility", 
+              "slow_reversion_high_volatility", "fast_reversion_high_volatility"]
+  
+  theorem_verification:
+    description: "Direct verification of O(N^{-2/p}) convergence theorem"
+    N_values: [8, 11, 16, 22, 32, 45, 64, 90, 128]
+    n_paths: 5000
+    monte_carlo_sims: 1000
+    regimes: ["slow_reversion_low_volatility", "fast_reversion_low_volatility", 
+              "slow_reversion_high_volatility", "fast_reversion_high_volatility"]
+  
+  practical_analysis:
+    description: "Fixed-dataset analysis for optimal block selection"
+    total_steps: 20480
+    n_paths: 1000
+    monte_carlo_sims: 1000
+    K_values: [2, 3, 4, 5, 7, 10, 14, 20, 28, 40, 56, 80, 113, 160, 226, 320]
+    regimes: ["slow_reversion_low_volatility", "fast_reversion_low_volatility",
+              "slow_reversion_high_volatility", "fast_reversion_high_volatility"]
+  
+  sensitivity_m:
+    description: "Sensitivity analysis for signature truncation level"
+    M_values: [2, 4, 6, 8]
+    N_values: [8, 16, 32, 64, 128]
+    n_paths: 1000
+    monte_carlo_sims: 1000
+    regimes: ["slow_reversion_low_volatility", "fast_reversion_low_volatility",
+              "slow_reversion_high_volatility", "fast_reversion_high_volatility"]
+  
+  sensitivity_steps:
+    description: "Sensitivity to discretization (steps per block)"
+    steps_per_block: [32, 64, 128, 256, 512, 1024, 2048, 4096]
+    n_blocks: 100
+    n_paths: 1000
+    monte_carlo_sims: 1000
+    regimes: ["slow_reversion_low_volatility", "fast_reversion_high_volatility"]
+  
+  granularity_stability:
+    description: "Test robustness across different granularity scales"
+    N_values: [1, 10, 100]
+    T_values: [0.1, 0.2, 0.5, 1.0, 2.0, 5.0, 10.0]
+    n_paths: 1000
+    monte_carlo_sims: 1000
+    regimes: ["slow_reversion_low_volatility", "fast_reversion_low_volatility",
+              "slow_reversion_high_volatility", "fast_reversion_high_volatility"]
+  
+  calibration_experiment:
+    description: "Comprehensive signature vs MLE comparison"
+    n_paths: 10
+    total_time: 5.0
+    n_steps: 5000
+    optimization:
+      max_iterations: 1000
+      n_restarts: 5
+      tolerance: 1e-8
+    regimes: ["slow_reversion_low_volatility", "fast_reversion_low_volatility",
+              "slow_reversion_high_volatility", "fast_reversion_high_volatility"]
+  
+  enhanced_calibration:
+    description: "Advanced calibration with optimal batching strategies"
+    n_paths: 10
+    batch_sizes: [1, 2, 5, 10]
+    K_values: [10, 20, 50, 100]
+    optimization:
+      parallel: true
+      cache_signatures: true
+    regimes: ["slow_reversion_low_volatility", "fast_reversion_high_volatility"]
+
+# Output configuration
+output:
+  results_dir: "plots"
+  figure_format: "png"
+  figure_dpi: 300
+  save_raw_data: true
+  timestamp_results: false

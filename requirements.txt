@@ -1,0 +1,8 @@
+torch
+signatory
+numpy
+scipy
+matplotlib
+pandas
+seaborn
+iisignature
