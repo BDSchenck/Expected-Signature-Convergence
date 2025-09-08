@@ -140,7 +140,7 @@ src/
 
 ### Experiment Reproduction
 ```bash
-# Foundational convergence validation (2 MC runs for testing)
+# Foundational convergence validation (100 MC runs, all in parallel)
 python -m src.numerical.run_foundational_experiments
 
 # Hyperparameter optimization (10 MC runs, 5 workers)  
