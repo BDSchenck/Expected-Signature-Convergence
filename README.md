@@ -34,7 +34,7 @@ Log-log MSE-versus-N slopes between **-1.86 and -3.61** observed across paramete
 | Parameter Regime | Signature Improvement | Statistical Significance |
 |-----------------|----------------------|-------------------------|
 | Slow Reversion, Low Vol | 10% | p < 0.001 |
-| Slow Reversion, High Vol | 24-32% | p < 0.001 |
+| Slow Reversion, High Vol | 32% | p < 0.001 |
 | Fast Reversion | Marginal decline | Not significant |
 
 ### Computational Efficiency
