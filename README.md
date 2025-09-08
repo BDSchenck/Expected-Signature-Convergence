@@ -87,7 +87,7 @@ min_{θ,μ,σ} ||S_emp - E[S^{(M)}(X(θ,μ,σ))]||²
 3. **Rescaled Signature**: Parameter-dependent transport for improved numerical stability
 
 ### Novel Scoring Rule
-**Score = MSE + λ · StdDev** with λ = 1.0, providing robust hyperparameter selection under limited Monte Carlo replications.
+**Score = MSE + λ · StdDev** with λ = 1.0, designed to achieve consensus between signature methods. By incorporating standard deviation, the scoring rule ensures that optimal learning rates and K values agree between Expected Signature and Rescaled Signature methods. The framework proves robust across λ ∈ {0.5, 1.0, 1.5}.
 
 ## Significance for Stochastic Finance
 
@@ -111,10 +111,10 @@ min_{θ,μ,σ} ||S_emp - E[S^{(M)}(X(θ,μ,σ))]||²
 
 ### Parameter Regime Coverage
 Four economically motivated parameter configurations:
-- **Slow Reversion, Low Volatility**: θ ∈ [0.05, 0.2], σ ∈ [0.1, 0.3] (interest rate dynamics)
-- **Fast Reversion, Low Volatility**: θ ∈ [0.5, 2.0], σ ∈ [0.1, 0.3] (tight mean reversion)  
-- **Slow Reversion, High Volatility**: θ ∈ [0.05, 0.2], σ ∈ [1.0, 2.0] (commodity behavior)
-- **Fast Reversion, High Volatility**: θ ∈ [0.5, 2.0], σ ∈ [1.0, 2.0] (high-frequency scenarios)
+- **Slow Reversion, Low Volatility**: θ ∈ [0.05, 0.2], σ ∈ [0.1, 0.3]
+- **Fast Reversion, Low Volatility**: θ ∈ [0.5, 2.0], σ ∈ [0.1, 0.3]
+- **Slow Reversion, High Volatility**: θ ∈ [0.05, 0.2], σ ∈ [1.0, 2.0]
+- **Fast Reversion, High Volatility**: θ ∈ [0.5, 2.0], σ ∈ [1.0, 2.0]
 
 ### Key Experimental Findings
 - **Consensus K* selection**: MSE + StdDev scoring with λ = 1.0 achieves method consensus
