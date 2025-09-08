@@ -105,7 +105,7 @@ def run_m_sensitivity_experiment(device):
                 # Clean up
                 del paths, thetas, mus, sigmas, estimator_t
                 del L_batch, scaling_operators, scaled_estimators
-                torch.cuda.empty_cache() if device.type == 'cuda' else None
+                torch.cuda.empty_cache() if device == 'cuda' else None
             
             # Average over all batches
             mse_standard_vs_N.append(mse_standard_accum / n_monte_carlo_sims)
@@ -287,7 +287,7 @@ def run_steps_sensitivity_experiment(device):
                 
                 # Clean up
                 del paths, thetas, mus, sigmas, true_sigs
-                torch.cuda.empty_cache() if device.type == 'cuda' else None
+                torch.cuda.empty_cache() if device == 'cuda' else None
             
             # Average over all batches
             mse = mse_accum / n_monte_carlo_sims

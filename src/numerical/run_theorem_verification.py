@@ -112,7 +112,7 @@ def run_theorem_verification_experiment(device):
                 
                 # Clear GPU memory after batch
                 del paths, thetas, mus, sigmas, true_sigs
-                if device.type == 'cuda':
+                if device == 'cuda':
                     torch.cuda.empty_cache()
             
             # Average MSE across all simulations
@@ -182,7 +182,7 @@ def run_theorem_verification_experiment(device):
     plt.close()
     
     # Final memory cleanup
-    if device.type == 'cuda':
+    if device == 'cuda':
         torch.cuda.empty_cache()
     
     print("Results saved to plots/theorem_verification_data.csv, summary.csv, and .png")

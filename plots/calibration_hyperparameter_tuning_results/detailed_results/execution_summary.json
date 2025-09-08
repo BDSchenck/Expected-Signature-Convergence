@@ -1,0 +1,7 @@
+{
+  "total_configurations": 5,
+  "monte_carlo_runs": 10,
+  "max_workers": 5,
+  "total_experiments": 20,
+  "successful_experiments": 5
+}

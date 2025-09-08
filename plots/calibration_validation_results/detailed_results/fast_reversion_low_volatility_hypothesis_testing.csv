@@ -1,0 +1,3 @@
+regime,method,K,test_type,t_statistic,p_value,significant,improvement_direction,mean_signature,mean_enhanced_mle,improvement_pct,sample_size,sample_size_mle
+"Fast Reversion, Low Volatility",Expected Signature,1024,paired_t_test,13.13329476074627,2.054643124687939e-23,True,mle_better,0.5441459749729439,0.539741133157705,-0.8161026730478804,100,N/A
+"Fast Reversion, Low Volatility",Rescaled Signature,1024,paired_t_test,13.13329476074627,2.054643124687939e-23,True,mle_better,0.5441459749729439,0.539741133157705,-0.8161026730478804,100,N/A

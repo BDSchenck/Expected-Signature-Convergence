@@ -17,7 +17,7 @@ import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
-from src.calibration.regime_optimization_experiment import (
+from src.calibration_mega.regime_optimization_experiment import (
     RegimeOptimizationExperiment, 
     run_all_regime_experiments
 )

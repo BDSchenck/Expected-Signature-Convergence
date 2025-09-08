@@ -1,0 +1,11 @@
+regime,method,K,test_type,t_statistic,p_value,significant,improvement_direction,mean_signature,mean_enhanced_mle,improvement_pct,sample_size,sample_size_mle
+"Fast Reversion, High Volatility",Expected Signature,16,paired_t_test,-0.9192158117889605,0.3819584460415353,False,signature_better,0.6716664715899638,0.6793970706051605,1.1378616937972375,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,64,paired_t_test,-1.1155358846773527,0.2935195245643358,False,signature_better,0.6550595484995718,0.6793970706051605,3.582223585967259,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,256,paired_t_test,-1.0341852682062638,0.3280377149863425,False,signature_better,0.6438593960507755,0.6793970706051605,5.23076652696346,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,1024,paired_t_test,-0.8608073908667485,0.41168901177318185,False,signature_better,0.6522649776792395,0.6793970706051605,3.9935545941865214,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,4096,paired_t_test,-0.5832476636416969,0.574049016170405,False,signature_better,0.6665797760751586,0.6793970706051605,1.8865690013330716,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,16,paired_t_test,-0.5527197930618152,0.5939151216578369,False,signature_better,0.6743700532874637,0.6793970706051605,0.7399233136550221,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,64,paired_t_test,-1.0577330521021708,0.31773994248984894,False,signature_better,0.6471545331327151,0.6793970706051605,4.745757505802306,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,256,paired_t_test,-0.8870731819336826,0.39812416230509506,False,signature_better,0.6564068523996646,0.6793970706051605,3.3839148268652197,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,1024,paired_t_test,-1.0930411695691455,0.30276777160924356,False,signature_better,0.6534179017616275,0.6793970706051605,3.82385647032486,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,4096,paired_t_test,0.3256354318640954,0.7521434725024675,False,mle_better,0.6819672308387497,0.6793970706051605,-0.37830016418820556,10,N/A

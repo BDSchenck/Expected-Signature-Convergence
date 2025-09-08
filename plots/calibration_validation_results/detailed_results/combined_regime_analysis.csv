@@ -1,0 +1,2 @@
+total_regimes,total_monte_carlo_runs,overall_enhanced_mle_mse,overall_expected_sig_mse,overall_rescaled_sig_mse,expected_sig_improvement_pct,rescaled_sig_improvement_pct,regimes_analyzed
+4,400,0.4256624427634803,0.3971913420086886,0.3888870264026856,6.68865699542388,8.63957273797562,"Slow Reversion, Low Volatility, Fast Reversion, Low Volatility, Slow Reversion, High Volatility, Fast Reversion, High Volatility"

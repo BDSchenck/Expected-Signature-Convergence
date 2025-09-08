@@ -1,0 +1,45 @@
+{
+  "timestamp": "20250817_151917",
+  "experiment_type": "Optimal Parameter Validation",
+  "n_monte_carlo": 100,
+  "use_parallel": true,
+  "max_workers": 5,
+  "device": "cuda",
+  "use_optimal_params": true,
+  "regimes": [
+    "Slow Reversion, Low Volatility",
+    "Fast Reversion, Low Volatility",
+    "Slow Reversion, High Volatility",
+    "Fast Reversion, High Volatility"
+  ],
+  "optimal_parameters_per_regime": {
+    "Slow Reversion, Low Volatility": {
+      "enhanced_mle_lr": "[0.05\u21920.05]",
+      "expected_sig_lr": "[0.005\u21920.005]",
+      "rescaled_sig_lr": "[0.005\u21920.005]",
+      "optimal_k_expected": 256,
+      "optimal_k_rescaled": 256
+    },
+    "Fast Reversion, Low Volatility": {
+      "enhanced_mle_lr": "[0.01\u21920.005]",
+      "expected_sig_lr": "[0.01\u21920.005]",
+      "rescaled_sig_lr": "[0.01\u21920.005]",
+      "optimal_k_expected": 1024,
+      "optimal_k_rescaled": 1024
+    },
+    "Slow Reversion, High Volatility": {
+      "enhanced_mle_lr": "[0.05\u21920.01]",
+      "expected_sig_lr": "[0.05\u21920.01]",
+      "rescaled_sig_lr": "[0.05\u21920.01]",
+      "optimal_k_expected": 256,
+      "optimal_k_rescaled": 256
+    },
+    "Fast Reversion, High Volatility": {
+      "enhanced_mle_lr": "[0.01\u21920.01]",
+      "expected_sig_lr": "[0.01\u21920.01]",
+      "rescaled_sig_lr": "[0.01\u21920.01]",
+      "optimal_k_expected": 64,
+      "optimal_k_rescaled": 64
+    }
+  }
+}

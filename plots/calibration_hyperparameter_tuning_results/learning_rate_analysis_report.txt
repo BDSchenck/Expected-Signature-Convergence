@@ -1,0 +1,30 @@
+COMPREHENSIVE LEARNING RATE ANALYSIS REPORT
+============================================================
+
+Analysis Date: 2025-08-16 14:37:32
+Monte Carlo Runs per Configuration: 10
+Parallel Workers: 5
+Total Configurations Tested: 5
+
+CONFIGURATIONS TESTED:
+------------------------------
+[0.05>0.05] Constant High: Constant high learning rate - no decay
+[0.05>0.01] Optimized Decay: High to moderate decay - current optimized
+[0.01>0.01] Constant Moderate: Constant moderate learning rate
+[0.01>0.005] Baseline Decay: Moderate to low decay - legacy baseline
+[0.005>0.005] Constant Low: Constant low learning rate
+
+SUMMARY TABLES GENERATED:
+------------------------------
+- Slow Reversion, Low Volatility
+- Fast Reversion, Low Volatility
+- Slow Reversion, High Volatility
+- Fast Reversion, High Volatility
+- Overall
+
+FILE OUTPUTS:
+------------------------------
+- detailed_results/: All CSV summary tables
+- detailed_results/configuration_details.csv: Parameter configurations
+- detailed_results/execution_summary.json: Execution metadata
+- learning_rate_analysis_report.txt: This summary report

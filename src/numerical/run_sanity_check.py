@@ -122,7 +122,7 @@ def run_sanity_check_experiment(device):
             del estimator_t, estimator_aug_t, true_sigs_t, true_sigs_aug_t
             del L_batch, L_batch_aug, scaling_operators, scaling_operators_aug
             del scaled_estimators, scaled_estimators_aug
-            torch.cuda.empty_cache() if device.type == 'cuda' else None
+            torch.cuda.empty_cache() if device == 'cuda' else None
 
     # --- Intelligent Aggregation using Pandas ---
     results_df = pd.DataFrame(batch_results_list)

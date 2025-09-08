@@ -1,10 +1,12 @@
-# Expected Signature Convergence
+# Convergence Theory for Expected Signature Estimation from Dependent Single Paths with Applications to Parameter Calibration
 
-This project provides a theoretical and practical framework for estimating the expected signature of a stochastic process from a single, dependent path, based on the research from the Master's Thesis, "Convergence Theory for Expected Signature Estimation from Dependent Single Paths with Applications to Parameter Calibration." This directory contains the code to reproduce the experiments and results presented in the thesis.
+This repository contains the complete implementation and experiments for the Master's Thesis by Bryson D. Schenck (ETH Zürich, 2025).
 
-## Overview
+📄 **[Full Thesis PDF (65 pages)](./Schenck-2025-Expected-Signature-Convergence-Theory.pdf)**
 
-The central goal of this work is to establish a rigorous statistical foundation for signature-based inference in settings where data is serially dependent, a common scenario in financial time series analysis. The project introduces a block-based empirical estimator for the expected signature and proves its convergence, providing a tool for non-parametric analysis of stochastic processes.
+## Abstract
+
+This thesis develops a convergence theory for empirical expected-signature estimators from single-path data under a segment-stationarity assumption and applies it to parameter calibration of two-dimensional Ornstein-Uhlenbeck processes. A segmentation and reindexing procedure is introduced that retains mean reversion and serial dependence across blocks without assuming block independence, yielding an estimator with finite-sample mean-squared-error convergence at rate O(N^{-2/p}) under exponential α-mixing. Validation uses a generator-based framework that reduces expected-signature computation in linear SDEs to matrix exponentials, enabling precise numerical verification. For calibration, signature-based methods achieve 10-32% improvement over Batched MLE in slow mean-reversion regimes, with 9-15% computational speedup, establishing clear advantages in both statistical accuracy and computational efficiency.
 
 ## Core Theoretical Contribution
 
@@ -45,59 +47,103 @@ To run the experiments and reproduce the results from the thesis, a modern Nvidi
     ```bash
     pip install -r requirements.txt
     ```
+3.  **Create the output directory:**
+    ```bash
+    mkdir plots
+    ```
 
-### Main Script
+## Experiment Types
 
-The primary script for running the experiments is `scripts/run_regime_studies.py`.
+This project contains two main types of experiments:
 
-### Running All Regimes
+### 1. Foundational Numerical Experiments
 
-To run the full suite of experiments across all four parameter regimes, execute the following command:
+These experiments verify the core convergence theory and include:
+- Theorem verification
+- Practical analysis 
+- Sanity checks
+- Sensitivity analysis
 
+**To run all foundational experiments:**
 ```bash
-python scripts/run_regime_studies.py --monte-carlo 100
+python -m src.numerical.run_foundational_experiments
 ```
 
-This will run 100 Monte Carlo simulations for each of the four regimes.
-
-### Running a Single Regime
-
-You can also run a single regime by specifying the `--regime` argument. The available regimes are:
-- `slow_low`: Slow Reversion, Low Volatility
-- `fast_low`: Fast Reversion, Low Volatility
-- `slow_high`: Slow Reversion, High Volatility
-- `fast_high`: Fast Reversion, High Volatility
-
-For example, to run the "Slow Reversion, High Volatility" regime with 50 Monte Carlo simulations:
-
+**To run a specific foundational experiment:**
 ```bash
-python scripts/run_regime_studies.py --regime slow_high --monte-carlo 50
+python -m src.numerical.run_foundational_experiments --experiment theorem_verification
 ```
 
-### Test Mode
+Available experiment names:
+- `theorem_verification`
+- `practical_analysis` 
+- `sanity_check`
+- `sensitivity_steps`
+- `sensitivity_m`
 
-For a quick test of the setup, you can use the `--test` flag. This will run a small number of Monte Carlo simulations (2) to ensure everything is working correctly:
+The Monte Carlo simulation count is configured in `config/experiments.yaml`.
 
+### 2. Calibration Experiments
+
+These experiments compare signature-based calibration against MLE across parameter regimes. The calibration system consists of two main phases:
+
+#### Phase 1: Hyperparameter Tuning
+Tests different learning rates and K values (number of blocks) across all calibration methods to find optimal parameters.
+
+**Hyperparameter tuning (10 Monte Carlo runs, 5 workers):**
+```bash
+python scripts/run_regime_studies.py --monte-carlo 10
+```
+
+**Quick test for setup verification (2 Monte Carlo runs, 2 workers):**
 ```bash
 python scripts/run_regime_studies.py --test
 ```
 
-### Specifying the Device
+The hyperparameter tuning explores the optimization landscape across all 4 parameter regimes to identify the best learning rates and K values for each calibration method.
 
-You can specify the computation device (e.g., `cuda` or `cpu`) using the `--device` argument:
+#### Phase 2: Validation Experiments
+Uses the optimal parameters from tuning to run larger-scale validation experiments with statistical significance.
 
+**Full validation as used in thesis (100 Monte Carlo runs, 5 workers):**
 ```bash
-python scripts/run_regime_studies.py --device cuda
+python scripts/run_regime_studies.py --monte-carlo 100
 ```
 
-By default, the script will use a CUDA-enabled GPU if available, and fall back to the CPU otherwise.
+**Single regime validation:**
+```bash
+python scripts/run_regime_studies.py --regime slow_high --monte-carlo 100
+```
+
+Available regimes:
+- `slow_low`: Slow Reversion, Low Volatility
+- `fast_low`: Fast Reversion, Low Volatility  
+- `slow_high`: Slow Reversion, High Volatility
+- `fast_high`: Fast Reversion, High Volatility
+
+#### Calibration Methods Compared
+- **Enhanced MLE**: Improved maximum likelihood estimation with smart initialization
+- **Expected Signature**: Direct signature-based calibration using expected signatures
+- **Rescaled Signature**: Signature-based calibration with rescaling for improved numerical stability
+
+### Device Selection
+
+Both experiment types will automatically use CUDA if available, or fall back to CPU. The foundational experiments detect the device automatically, while calibration experiments accept a `--device` argument.
 
 ### Outputs
 
-The script will generate the following outputs:
--   **Logs**: A `regime_studies.log` file with detailed information about the experiment run.
--   **Plots**: PNG files of the optimization landscape and other analysis plots will be saved in a timestamped subdirectory within the `plots` directory.
--   **Results**: Detailed results of the experiments will be saved as CSV files in a `detailed_results` subdirectory within the timestamped plots directory.
+#### Foundational Experiments Output
+- **Plots**: Convergence plots and analysis figures saved to `plots/` directory
+- **Data**: Experimental data saved as CSV files for further analysis
+- **Console**: Real-time progress and statistical results
+
+#### Calibration Experiments Output
+- **Logs**: `regime_studies.log` file with detailed experiment information
+- **Timestamped Results**: Each run creates a timestamped folder in `plots/regime_studies_YYYYMMDD_HHMMSS/` containing:
+  - **Optimization Landscapes**: PNG files showing MSE surfaces across different K values for each calibration method
+  - **Detailed Results**: CSV files in `detailed_results/` subdirectory with all raw experimental data
+  - **Experiment Parameters**: JSON file recording all configuration settings used
+- **Real-time Progress**: Console output showing convergence progress, timing, and enhancement rates
 
 ## Citation
 

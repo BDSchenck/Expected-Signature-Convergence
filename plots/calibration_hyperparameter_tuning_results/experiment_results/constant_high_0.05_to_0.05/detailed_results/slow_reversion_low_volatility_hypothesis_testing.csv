@@ -1,0 +1,11 @@
+regime,method,K,test_type,t_statistic,p_value,significant,improvement_direction,mean_signature,mean_enhanced_mle,improvement_pct,sample_size,sample_size_mle
+"Slow Reversion, Low Volatility",Expected Signature,16,paired_t_test,-0.3181267787953487,0.7576465648381125,False,signature_better,0.0468752952449512,0.04795863595638679,2.2589064301594575,10,N/A
+"Slow Reversion, Low Volatility",Expected Signature,64,paired_t_test,0.6882698728170078,0.5086328774675882,False,mle_better,0.049494731686046595,0.04795863595638679,-3.202959590128285,10,N/A
+"Slow Reversion, Low Volatility",Expected Signature,256,paired_t_test,-0.026379626742713876,0.9795302057464421,False,signature_better,0.047897066525031035,0.04795863595638679,0.12838028048117733,10,N/A
+"Slow Reversion, Low Volatility",Expected Signature,1024,paired_t_test,1.4718393196321318,0.17514761026665815,False,mle_better,0.0506232907681116,0.04795863595638679,-5.556152210308962,10,N/A
+"Slow Reversion, Low Volatility",Expected Signature,4096,paired_t_test,1.3079337570428196,0.22331453724534775,False,mle_better,0.05002715744733673,0.04795863595638679,-4.31313662221553,10,N/A
+"Slow Reversion, Low Volatility",Rescaled Signature,16,paired_t_test,-0.9338638037414897,0.37474998277710714,False,signature_better,0.045368123801623465,0.04795863595638679,5.4015551174539596,10,N/A
+"Slow Reversion, Low Volatility",Rescaled Signature,64,paired_t_test,-1.444889369873945,0.18238913449651337,False,signature_better,0.04682296812667665,0.04795863595638679,2.368015284552527,10,N/A
+"Slow Reversion, Low Volatility",Rescaled Signature,256,paired_t_test,0.259347898214876,0.8012016194231568,False,mle_better,0.04857686855215494,0.04795863595638679,-1.289095453695488,10,N/A
+"Slow Reversion, Low Volatility",Rescaled Signature,1024,paired_t_test,0.5391731152622045,0.6028478227038296,False,mle_better,0.049121690208336996,0.04795863595638679,-2.4251195405304626,10,N/A
+"Slow Reversion, Low Volatility",Rescaled Signature,4096,paired_t_test,1.2960328781882313,0.22721178479601267,False,mle_better,0.050109103709552606,0.04795863595638679,-4.48400524802548,10,N/A

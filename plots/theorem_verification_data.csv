@@ -1,0 +1,17 @@
+regime,N,K,MSE
+"Slow Reversion, Low Volatility",8,64,0.0001719942471805018
+"Slow Reversion, Low Volatility",16,256,3.403481709991361e-05
+"Slow Reversion, Low Volatility",32,1024,1.0028532244311105e-05
+"Slow Reversion, Low Volatility",64,4096,2.7546387975772477e-06
+"Fast Reversion, Low Volatility",8,64,0.030199508359245453
+"Fast Reversion, Low Volatility",16,256,0.00997626005295062
+"Fast Reversion, Low Volatility",32,1024,0.0030047042264240314
+"Fast Reversion, Low Volatility",64,4096,0.00084190885126355
+"Slow Reversion, High Volatility",8,64,0.009545678901430647
+"Slow Reversion, High Volatility",16,256,0.0006891856943528947
+"Slow Reversion, High Volatility",32,1024,4.803428762536071e-05
+"Slow Reversion, High Volatility",64,4096,5.575968530725252e-06
+"Fast Reversion, High Volatility",8,64,0.04026133590259234
+"Fast Reversion, High Volatility",16,256,0.011575691115803897
+"Fast Reversion, High Volatility",32,1024,0.002822589783774654
+"Fast Reversion, High Volatility",64,4096,0.0007202246981978191

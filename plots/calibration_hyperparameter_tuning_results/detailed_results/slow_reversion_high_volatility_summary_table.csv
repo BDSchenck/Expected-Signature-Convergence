@@ -1,0 +1,16 @@
+Method,Learning Rate,Convergence Rate,Enhancement Rate,Mean MSE,Std MSE,CI Lower,CI Upper,N Samples,Best K,Method Type
+Enhanced MLE,[0.05>0.05] Constant High,50.0%,50.0%,0.520474,0.351526,0.269007,0.771941,10,,Enhanced MLE
+Expected Signature,[0.05>0.05] Constant High,100.0%,90.0%,0.132659,0.094444,0.065098,0.20022,10,1024.0,Expected Signature
+Rescaled Signature,[0.05>0.05] Constant High,100.0%,90.0%,0.121566,0.089067,0.057851,0.18528,10,256.0,Rescaled Signature
+Enhanced MLE,[0.05>0.01] Optimized Decay,30.0%,20.0%,0.320275,0.238036,0.149994,0.490555,10,,Enhanced MLE
+Expected Signature,[0.05>0.01] Optimized Decay,80.0%,70.0%,0.073246,0.024551,0.055683,0.090809,10,256.0,Expected Signature
+Rescaled Signature,[0.05>0.01] Optimized Decay,80.0%,80.0%,0.073159,0.040182,0.044414,0.101904,10,256.0,Rescaled Signature
+Enhanced MLE,[0.01>0.01] Constant Moderate,10.0%,40.0%,0.410238,0.307737,0.190096,0.630379,10,,Enhanced MLE
+Expected Signature,[0.01>0.01] Constant Moderate,70.0%,80.0%,0.283303,0.362326,0.02411,0.542495,10,256.0,Expected Signature
+Rescaled Signature,[0.01>0.01] Constant Moderate,70.0%,80.0%,0.281896,0.341299,0.037745,0.526046,10,256.0,Rescaled Signature
+Enhanced MLE,[0.01>0.005] Baseline Decay,10.0%,50.0%,0.3996416712032967,0.3401546514762701,0.15630969216568996,0.6429736502409034,10,,Enhanced MLE
+Expected Signature,[0.01>0.005] Baseline Decay,100.0%,80.0%,0.5601107985895497,0.9936030349069227,-0.15066999424209104,1.2708915914211905,10,1024.0,Expected Signature
+Rescaled Signature,[0.01>0.005] Baseline Decay,100.0%,80.0%,0.5531374006347388,0.9822742954893839,-0.14953930021842332,1.255814101487901,10,1024.0,Rescaled Signature
+Enhanced MLE,[0.005>0.005] Constant Low,10.0%,60.0%,0.378406,0.233451,0.211405,0.545406,10,,Enhanced MLE
+Expected Signature,[0.005>0.005] Constant Low,60.0%,80.0%,0.519392,0.674261,0.037055,1.001729,10,256.0,Expected Signature
+Rescaled Signature,[0.005>0.005] Constant Low,60.0%,80.0%,0.522838,0.678305,0.037607,1.008068,10,256.0,Rescaled Signature

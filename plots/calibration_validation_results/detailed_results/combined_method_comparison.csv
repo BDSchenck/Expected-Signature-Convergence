@@ -1,0 +1,4 @@
+method,best_MSE,optimal_K,n_successful_runs,success_rate
+Enhanced_MLE,0.42566244276348025,consensus,400,100.0
+Expected_Signature,0.18805182644523896,256,200,2500.0
+Rescaled_Signature,0.17083258566230392,256,200,2500.0

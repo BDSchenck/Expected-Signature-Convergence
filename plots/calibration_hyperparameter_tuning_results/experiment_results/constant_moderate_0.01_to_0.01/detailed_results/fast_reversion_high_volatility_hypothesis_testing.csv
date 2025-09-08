@@ -1,0 +1,11 @@
+regime,method,K,test_type,t_statistic,p_value,significant,improvement_direction,mean_signature,mean_enhanced_mle,improvement_pct,sample_size,sample_size_mle
+"Fast Reversion, High Volatility",Expected Signature,16,paired_t_test,1.9230802429623786,0.08662795232502324,False,mle_better,0.651029787992215,0.6407543238230821,-1.6036511634949235,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,64,paired_t_test,1.9230802429623786,0.08662795232502324,False,mle_better,0.651029787992215,0.6407543238230821,-1.6036511634949235,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,256,paired_t_test,1.9230802429623786,0.08662795232502324,False,mle_better,0.651029787992215,0.6407543238230821,-1.6036511634949235,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,1024,paired_t_test,1.9230802429623786,0.08662795232502324,False,mle_better,0.651029787992215,0.6407543238230821,-1.6036511634949235,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,4096,paired_t_test,1.9230802429623786,0.08662795232502324,False,mle_better,0.651029787992215,0.6407543238230821,-1.6036511634949235,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,16,paired_t_test,1.9230802429623786,0.08662795232502324,False,mle_better,0.651029787992215,0.6407543238230821,-1.6036511634949235,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,64,paired_t_test,1.9230802429623786,0.08662795232502324,False,mle_better,0.651029787992215,0.6407543238230821,-1.6036511634949235,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,256,paired_t_test,1.9230802429623786,0.08662795232502324,False,mle_better,0.651029787992215,0.6407543238230821,-1.6036511634949235,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,1024,paired_t_test,1.9230802429623786,0.08662795232502324,False,mle_better,0.651029787992215,0.6407543238230821,-1.6036511634949235,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,4096,paired_t_test,1.9230802429623786,0.08662795232502324,False,mle_better,0.651029787992215,0.6407543238230821,-1.6036511634949235,10,N/A

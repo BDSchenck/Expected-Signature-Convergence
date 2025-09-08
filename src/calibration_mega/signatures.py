@@ -54,7 +54,7 @@ logger = logging.getLogger(__name__)
 # =============================================================================
 
 class RobustSignatureCalibrator(CalibratorInterface):
-        """
+    """
     Robust signature calibrator with enhanced convergence for all T values.
     
     This calibrator uses the following unified parameters:

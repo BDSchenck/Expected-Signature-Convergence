@@ -1,0 +1,11 @@
+regime,method,K,test_type,t_statistic,p_value,significant,improvement_direction,mean_signature,mean_enhanced_mle,improvement_pct,sample_size,sample_size_mle
+"Slow Reversion, High Volatility",Expected Signature,16,paired_t_test,2.319847455692737,0.04549716842588499,True,mle_better,1.3652528117411282,0.5204740142226849,-162.3095052651379,10,N/A
+"Slow Reversion, High Volatility",Expected Signature,64,paired_t_test,0.7905397615792786,0.44954093497442804,False,mle_better,0.7289922883927893,0.5204740142226849,-40.063147913642005,10,N/A
+"Slow Reversion, High Volatility",Expected Signature,256,paired_t_test,-4.354914356827412,0.001837037279914849,True,signature_better,0.13380866437541936,0.5204740142226849,74.2909999886816,10,N/A
+"Slow Reversion, High Volatility",Expected Signature,1024,paired_t_test,-4.386938234015097,0.001753338944879097,True,signature_better,0.13265896348025163,0.5204740142226849,74.51189495437644,10,N/A
+"Slow Reversion, High Volatility",Expected Signature,4096,paired_t_test,-3.656676267049869,0.0052626284884523845,True,signature_better,0.17353320401139444,0.5204740142226849,66.65862285736551,10,N/A
+"Slow Reversion, High Volatility",Rescaled Signature,16,paired_t_test,2.4151283322555934,0.03892033540467283,True,mle_better,1.471724496258449,0.5204740142226849,-182.76618160398135,10,N/A
+"Slow Reversion, High Volatility",Rescaled Signature,64,paired_t_test,0.45010549631087704,0.6632803305610618,False,mle_better,0.6367022660254587,0.5204740142226849,-22.33123049886703,10,N/A
+"Slow Reversion, High Volatility",Rescaled Signature,256,paired_t_test,-4.369156587705795,0.0017992982902676016,True,signature_better,0.12156553805490238,0.5204740142226849,76.64330307893324,10,N/A
+"Slow Reversion, High Volatility",Rescaled Signature,1024,paired_t_test,-4.3105929411465915,0.0019599857783606767,True,signature_better,0.13273903770133605,0.5204740142226849,74.49651009002274,10,N/A
+"Slow Reversion, High Volatility",Rescaled Signature,4096,paired_t_test,-3.647207067525057,0.0053406722466109975,True,signature_better,0.17935935298429984,0.5204740142226849,65.53922999361099,10,N/A

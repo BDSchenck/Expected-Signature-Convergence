@@ -1,0 +1,6 @@
+Configuration,Name,Description,MLE_LR,MLE_LR_End,Sig_LR,Sig_LR_End,Patience
+constant_high,[0.05>0.05] Constant High,Constant high learning rate - no decay,0.05,0.05,0.05,0.05,100
+optimized_decay,[0.05>0.01] Optimized Decay,High to moderate decay - current optimized,0.05,0.01,0.05,0.01,100
+constant_moderate,[0.01>0.01] Constant Moderate,Constant moderate learning rate,0.01,0.01,0.01,0.01,100
+baseline_decay,[0.01>0.005] Baseline Decay,Moderate to low decay - legacy baseline,0.01,0.005,0.01,0.005,100
+constant_low,[0.005>0.005] Constant Low,Constant low learning rate,0.005,0.005,0.005,0.005,100

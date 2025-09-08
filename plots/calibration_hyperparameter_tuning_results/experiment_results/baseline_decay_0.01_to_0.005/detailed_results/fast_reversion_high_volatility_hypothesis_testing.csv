@@ -1,0 +1,11 @@
+regime,method,K,test_type,t_statistic,p_value,significant,improvement_direction,mean_signature,mean_enhanced_mle,improvement_pct,sample_size,sample_size_mle
+"Fast Reversion, High Volatility",Expected Signature,16,paired_t_test,-0.28278873017055683,0.7837350542491675,False,signature_better,0.6635276574631825,0.6660483509229881,0.37845502602212866,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,64,paired_t_test,0.3721149168621076,0.7184181256413475,False,mle_better,0.6686386026986575,0.6660483509229881,-0.38889845941063594,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,256,paired_t_test,-0.5281349094311687,0.610178611289348,False,signature_better,0.6591433139414731,0.6660483509229881,1.0367170749610355,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,1024,paired_t_test,-0.5984076139647869,0.5643223298397604,False,signature_better,0.6573109431631953,0.6660483509229881,1.311827849687608,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,4096,paired_t_test,-0.09286302456054525,0.9280467007231055,False,signature_better,0.6651303065338052,0.6660483509229881,0.13783449623600008,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,16,paired_t_test,-0.11329901024166211,0.9122805412383139,False,signature_better,0.6651375173513312,0.6660483509229881,0.13675186949936302,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,64,paired_t_test,0.5473830483344528,0.5974256932584378,False,mle_better,0.6695486763729379,0.6660483509229881,-0.5255362384876783,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,256,paired_t_test,-0.38519927844208834,0.7090354004736261,False,signature_better,0.6618390319281253,0.6660483509229881,0.6319839977127262,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,1024,paired_t_test,-0.510412655643919,0.6220448403816221,False,signature_better,0.6584425951095677,0.6660483509229881,1.141922474979562,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,4096,paired_t_test,-0.017721634991753374,0.9862475737797327,False,signature_better,0.6658847122741731,0.6660483509229881,0.02456858403571127,10,N/A

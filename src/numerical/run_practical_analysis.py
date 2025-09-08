@@ -97,7 +97,7 @@ def run_practical_analysis_experiment(device):
                 
                 # Clean up GPU memory
                 del paths, thetas, mus, sigmas, true_sigs
-                torch.cuda.empty_cache() if device.type == 'cuda' else None
+                torch.cuda.empty_cache() if device == 'cuda' else None
             
             # Average MSE across all simulations
             mse = mse_accumulator / n_monte_carlo_sims

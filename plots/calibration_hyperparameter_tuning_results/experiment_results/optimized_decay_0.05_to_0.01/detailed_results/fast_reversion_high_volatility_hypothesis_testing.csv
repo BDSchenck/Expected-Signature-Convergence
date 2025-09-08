@@ -1,0 +1,11 @@
+regime,method,K,test_type,t_statistic,p_value,significant,improvement_direction,mean_signature,mean_enhanced_mle,improvement_pct,sample_size,sample_size_mle
+"Fast Reversion, High Volatility",Expected Signature,16,paired_t_test,1.0,0.34343639613791355,False,mle_better,0.6650830491390665,0.6626973625907973,-0.3599963849173049,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,64,paired_t_test,1.0,0.34343639613791355,False,mle_better,0.6650830491390665,0.6626973625907973,-0.3599963849173049,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,256,paired_t_test,-0.07788121053187817,0.939626550763645,False,signature_better,0.6624028974224865,0.6626973625907973,0.04443433532911323,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,1024,paired_t_test,1.0,0.34343639613791355,False,mle_better,0.6650830491390665,0.6626973625907973,-0.3599963849173049,10,N/A
+"Fast Reversion, High Volatility",Expected Signature,4096,paired_t_test,0.9999706212277356,0.34344985949494655,False,mle_better,0.6650829730084009,0.6626973625907973,-0.3599848969184416,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,16,paired_t_test,1.0,0.34343639613791355,False,mle_better,0.6650830491390665,0.6626973625907973,-0.3599963849173049,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,64,paired_t_test,1.0,0.34343639613791355,False,mle_better,0.6650830491390665,0.6626973625907973,-0.3599963849173049,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,256,paired_t_test,1.0,0.34343639613791355,False,mle_better,0.6650830491390665,0.6626973625907973,-0.3599963849173049,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,1024,paired_t_test,1.0,0.34343639613791355,False,mle_better,0.6650830491390665,0.6626973625907973,-0.3599963849173049,10,N/A
+"Fast Reversion, High Volatility",Rescaled Signature,4096,paired_t_test,0.9999750579054485,0.3434478262812891,False,mle_better,0.6650829825343976,0.6626973625907973,-0.3599863343764831,10,N/A

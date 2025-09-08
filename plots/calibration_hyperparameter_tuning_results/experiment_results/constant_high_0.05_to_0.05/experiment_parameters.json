@@ -1,0 +1,48 @@
+{
+  "timestamp": "20250816_052909",
+  "n_monte_carlo": 10,
+  "use_parallel": true,
+  "max_workers": 5,
+  "device": "cuda",
+  "regimes": [
+    "Slow Reversion, Low Volatility",
+    "Fast Reversion, Low Volatility",
+    "Slow Reversion, High Volatility",
+    "Fast Reversion, High Volatility"
+  ],
+  "optimization_parameters": {
+    "mle_learning_rate": 0.05,
+    "mle_learning_rate_end": 0.05,
+    "signature_learning_rate": 0.05,
+    "signature_learning_rate_end": 0.05,
+    "patience": 100,
+    "max_iterations": 1000,
+    "tolerance": 1e-05,
+    "convergence_factor": 0.995,
+    "gradient_clip_norm": 1.0,
+    "weight_decay": 0.0001
+  },
+  "k_values": {
+    "enhanced_mle": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "expected_signature": [
+      16,
+      64,
+      256,
+      1024,
+      4096
+    ],
+    "rescaled_signature": [
+      16,
+      64,
+      256,
+      1024,
+      4096
+    ]
+  }
+}
