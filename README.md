@@ -3,7 +3,7 @@
 **Master's Thesis - ETH Zürich, 2025**  
 **Author:** Bryson D. Schenck | **Advisor:** Prof. Dr. Josef Teichmann
 
-This repository contains the complete implementation and experimental validation for a thesis that establishes the first rigorous convergence theory for empirical expected-signature estimators from serially dependent single-path data, with applications to financial parameter calibration.
+This repository contains the complete implementation and experimental validation for a thesis that establishes the first rigorous convergence theory for empirical expected-signature estimators from serially dependent single-path data, with applications to parameter calibration.
 
 **[Full Thesis PDF (65 pages)](./Schenck-2025-Expected-Signature-Convergence-Theory.pdf)**
 
