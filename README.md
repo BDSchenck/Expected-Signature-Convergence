@@ -109,9 +109,9 @@ min_{θ,μ,σ} ||S_emp - E[S^{(M)}(X(θ,μ,σ))]||²
 ## Impact and Significance
 
 ### Theoretical Advances
-- **First convergence theory** for signature-based parameter estimation from dependent single-path data
-- **Segment-stationarity framework** that handles realistic financial processes with mean reversion
-- **Rigorous bias-variance analysis** under serial dependence—filling a critical gap in signature theory
+- **First convergence theory** for signature-based parameter estimation from dependent single-path data  
+- **Segment-stationarity framework** that handles realistic financial processes with mean reversion  
+- **Rigorous bias-variance analysis** under serial dependence—filling a critical gap in signature theory  
 
 ### Practical Implications for Finance
 - **Alternative to likelihood methods** when traditional assumptions fail (non-IID data, model misspecification)
