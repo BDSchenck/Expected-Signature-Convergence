@@ -1,15 +1,41 @@
 # Convergence Theory for Expected Signature Estimation from Dependent Single Paths with Applications to Parameter Calibration
 
 **Master's Thesis - ETH Zürich, 2025**  
-**Author:** Bryson D. Schenck | **Advisor:** Prof. Dr. Josef Teichmann
+**Author:** Bryson D. Schenck  
+**Advisor:** Prof. Dr. Josef Teichmann
 
 This repository contains the complete implementation and experimental validation for a thesis that establishes the first rigorous convergence theory for empirical expected-signature estimators from serially dependent single-path data, with applications to financial parameter calibration.
 
 **[Full Thesis PDF (65 pages)](./Schenck-2025-Expected-Signature-Convergence-Theory.pdf)**
 
+## Overview
+
+Path signatures are mathematical objects that capture the essential geometric features of time series data, making them powerful tools for analyzing financial markets. However, a fundamental theoretical gap existed: **how reliably can we estimate expected signatures from real financial data that exhibits serial dependence?**
+
+This thesis provides the **first rigorous answer** to this question, establishing convergence theory for signature estimation from dependent single-path data. The practical impact is demonstrated through financial parameter calibration, where signature methods achieve **10-32% accuracy improvements** over traditional approaches in challenging market regimes.
+
+### Key Innovations
+- **Theoretical**: First convergence theory for signature estimation under realistic financial data assumptions
+- **Methodological**: Segment-stationarity framework that handles mean-reverting processes  
+- **Practical**: Superior parameter calibration performance in slow mean-reversion regimes
+
 ## Abstract
 
-This thesis develops a convergence theory for empirical expected-signature estimators from single-path data under segment-stationarity (shift-invariant path segments with exponentially decaying serial dependence) and applies it to parameter calibration of two-dimensional Ornstein-Uhlenbeck processes. The main result establishes finite-sample mean-squared-error convergence at rate **O(N^{-2/p})** where N controls block size and p > 2 denotes path regularity. Through systematic hyperparameter optimization, signature methods achieve **10-32% accuracy improvements** over Batched MLE in slow mean-reversion regimes while maintaining **9-15% computational speedups**.
+This thesis develops a convergence theory for empirical expected-signature estimators from single-path data (single realizations of potentially multi-dimensional stochastic processes) under segment-stationarity (shift-invariant path segments with exponentially decaying serial dependence) and applies it to parameter calibration of two-dimensional Ornstein-Uhlenbeck processes. The main result establishes finite-sample mean-squared-error convergence at rate **O(N^{-2/p})** where N controls block size and p > 2 denotes path regularity. Through systematic hyperparameter optimization, signature methods achieve **10-32% accuracy improvements** over optimally-tuned Batched MLE in slow mean-reversion regimes while maintaining **9-15% computational speedups**.
+
+## Empirical Performance Results
+*Signature methods vs. optimally-tuned Batched MLE with hyperparameter optimization*
+
+| Parameter Regime | Signature Improvement | Computational Speedup | Statistical Significance |
+|-----------------|----------------------|----------------------|-------------------------|
+| Slow Reversion, Low Volatility | **+10%** | **+9%** | p < 0.001 |
+| Slow Reversion, High Volatility | **+32%** | **+15%** | p < 0.001 |
+| Fast Reversion Regimes | Marginal decline | No speedup | Not significant |
+
+### Convergence Rate Validation
+- **Log-log MSE-versus-N slopes**: -1.86 to -3.61 across all parameter regimes
+- **Superior convergence rates**: 94% vs 15% success rates (slow/high volatility regime)
+- **Theoretical predictions confirmed** across four economically motivated regimes
 
 ## Principal Theoretical Contribution
 
@@ -27,20 +53,9 @@ where the bias term decays as O(N^{-4β}) and variance dominates at O(N^{-2β}) 
 ### Innovation: Segment-Stationarity
 The breakthrough lies in the **segment-stationarity assumption**, which enables consistent estimation from time-homogeneous increments without requiring full process stationarity—crucial for mean-reverting financial processes where traditional IID assumptions fail.
 
-## Empirical Performance Results
-
-| Parameter Regime | Signature Improvement | Computational Speedup | Statistical Significance |
-|-----------------|----------------------|----------------------|-------------------------|
-| Slow Reversion, Low Volatility | **+10%** | **+9%** | p < 0.001 |
-| Slow Reversion, High Volatility | **+32%** | **+15%** | p < 0.001 |
-| Fast Reversion Regimes | Marginal decline | No speedup | Not significant |
-
-### Convergence Rate Validation
-- **Log-log MSE-versus-N slopes**: -1.86 to -3.61 across all parameter regimes
-- **Superior convergence rates**: 94% vs 15% success rates (slow/high volatility regime)
-- **Theoretical predictions confirmed** across four economically motivated regimes
-
 ## Analytical Framework for Ornstein-Uhlenbeck Processes
+
+For validation and practical applications, we develop an analytical approach to compute expected signatures of Ornstein-Uhlenbeck processes exactly. This enables machine-precision validation of our convergence theory and efficient parameter calibration.
 
 ### Generator-Based Expected Signature Computation
 For Ornstein-Uhlenbeck processes satisfying the Stratonovich SDE:
@@ -62,6 +77,8 @@ where G^{(M)} is the lifted generator on the truncated tensor algebra T^{(M)}(�
 
 ## Block Sampling Architecture
 
+The core challenge in signature estimation from dependent data is balancing bias and variance. Our solution uses a block-based approach that divides the time series into non-overlapping segments, allowing us to exploit local stationarity while controlling for long-range dependence.
+
 ### Estimator Construction
 - **Block length**: Δt_N = δ/N  
 - **Number of blocks**: K_N ≍ N^{1+2β} where β = 1/p
@@ -82,19 +99,24 @@ min_{θ,μ,σ} ||S_emp - E[S^{(M)}(X(θ,μ,σ))]||²
 ```
 
 ### Three-Method Comparison
-1. **Enhanced MLE**: Batched maximum likelihood with smart initialization
+1. **Batched MLE**: Batched maximum likelihood with smart initialization
 2. **Expected Signature**: Direct signature matching with analytical expected signatures  
 3. **Rescaled Signature**: Parameter-dependent transport for improved numerical stability
 
 ### Novel Scoring Rule
 **Score = MSE + λ · StdDev** with λ = 1.0, designed to achieve consensus between signature methods. By incorporating standard deviation, the scoring rule ensures that optimal learning rates and K values agree between Expected Signature and Rescaled Signature methods. The framework proves robust across λ ∈ {0.5, 1.0, 1.5}.
 
-## Significance for Stochastic Finance
+## Impact and Significance
 
-### Theoretical Foundations
+### Theoretical Advances
 - **First convergence theory** for signature-based parameter estimation from dependent single-path data
-- **Segment-stationarity framework** applicable to mean-reverting processes in finance
-- **Complete mathematical treatment** of bias-variance trade-offs under serial dependence
+- **Segment-stationarity framework** that handles realistic financial processes with mean reversion
+- **Rigorous bias-variance analysis** under serial dependence—filling a critical gap in signature theory
+
+### Practical Implications for Finance
+- **Alternative to likelihood methods** when traditional assumptions fail (non-IID data, model misspecification)
+- **Robust parameter estimation** in challenging regimes where MLE underperforms
+- **Computational advantages** through GPU-optimized signature computations
 
 ## Experimental Validation
 
@@ -160,4 +182,8 @@ python scripts/run_regime_studies.py --monte-carlo 100
 
 ---
 
-*This thesis establishes the first convergence theory for signature estimation from dependent single-path data and demonstrates significant performance advantages in financial parameter calibration, bridging stochastic analysis theory with quantitative finance applications.*
+## Summary
+
+This work bridges a critical gap between signature theory and practical financial applications by establishing the first convergence theory for signature estimation from dependent data. The resulting framework enables robust parameter calibration that outperforms traditional methods in challenging market regimes, opening new avenues for signature-based quantitative finance.
+
+**Key contributions**: Theoretical foundations (O(N^{-2/p}) convergence), methodological innovation (segment-stationarity), and practical impact (10-32% accuracy improvements in parameter calibration).
