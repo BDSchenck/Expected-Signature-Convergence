@@ -5,13 +5,11 @@
 
 This repository contains the complete implementation and experimental validation for a thesis that establishes the first rigorous convergence theory for empirical expected-signature estimators from serially dependent single-path data, with applications to parameter calibration.
 
-**Note on "Single-Path"**: Throughout this work, "single-path" refers to a single realization or observed trajectory of a stochastic process, not to single-dimensional processes. The methodology applies to multi-dimensional processes (e.g., two-dimensional Ornstein-Uhlenbeck processes as demonstrated) where we observe one sample path over time.
-
 **[Full Thesis PDF (65 pages)](./Schenck-2025-Expected-Signature-Convergence-Theory.pdf)**
 
 ## Abstract
 
-This thesis develops a convergence theory for empirical expected-signature estimators from single-path data under segment-stationarity (shift-invariant path segments with exponentially decaying serial dependence) and applies it to parameter calibration of two-dimensional Ornstein-Uhlenbeck processes. The main result establishes finite-sample mean-squared-error convergence at rate **O(N^{-2/p})** where N controls block size and p > 2 denotes path regularity. Through systematic hyperparameter optimization, signature methods achieve **10-32% accuracy improvements** over Batched MLE in slow mean-reversion regimes while maintaining **9-15% computational speedups**.
+This thesis develops a convergence theory for empirical expected-signature estimators from single-path data under (single realizations of potentially multi-dimensional stochastic processes) segment-stationarity (shift-invariant path segments with exponentially decaying serial dependence) and applies it to parameter calibration of two-dimensional Ornstein-Uhlenbeck processes. The main result establishes finite-sample mean-squared-error convergence at rate **O(N^{-2/p})** where N controls block size and p > 2 denotes path regularity. Through systematic hyperparameter optimization, signature methods achieve **10-32% accuracy improvements** over Batched MLE in slow mean-reversion regimes while maintaining **9-15% computational speedups**.
 
 ## Principal Theoretical Contribution
 
