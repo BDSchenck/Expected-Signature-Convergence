@@ -5,6 +5,8 @@
 
 This repository contains the complete implementation and experimental validation for a thesis that establishes the first rigorous convergence theory for empirical expected-signature estimators from serially dependent single-path data, with applications to parameter calibration.
 
+**Note on "Single-Path"**: Throughout this work, "single-path" refers to a single realization or observed trajectory of a stochastic process, not to single-dimensional processes. The methodology applies to multi-dimensional processes (e.g., two-dimensional Ornstein-Uhlenbeck processes as demonstrated) where we observe one sample path over time.
+
 **[Full Thesis PDF (65 pages)](./Schenck-2025-Expected-Signature-Convergence-Theory.pdf)**
 
 ## Abstract
