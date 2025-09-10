@@ -1,8 +1,7 @@
 # Convergence Theory for Expected Signature Estimation from Dependent Single Paths with Applications to Parameter Calibration
 
 **Master's Thesis - ETH Zürich, 2025**  
-**Author:** Bryson D. Schenck
-
+**Author:** Bryson D. Schenck \n
 **Advisor:** Prof. Dr. Josef Teichmann
 
 This repository contains the complete implementation and experimental validation for a thesis that establishes the first rigorous convergence theory for empirical expected-signature estimators from serially dependent single-path data, with applications to parameter calibration.
