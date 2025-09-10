@@ -100,7 +100,7 @@ min_{θ,μ,σ} ||S_emp - E[S^{(M)}(X(θ,μ,σ))]||²
 ## Experimental Validation
 
 ### Rigorous Statistical Design
-**Phase 0**: Analytical OU parameter selection across K ∈ {1,2,4,8,16,32,64,128,256}
+**Phase 0**: Analytical OU parameter selection across K ∈ {1,2,4,8,16,32,64,128,256}  
 **Phase 1**: Hyperparameter optimization (10 Monte Carlo runs per configuration)  
 **Phase 2**: Statistical validation (100 Monte Carlo runs with Wilcoxon signed-rank tests)
 
