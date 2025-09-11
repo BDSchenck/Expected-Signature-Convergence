@@ -23,7 +23,7 @@ This thesis provides the **first rigorous answer** to this question, establishin
 
 This thesis develops a convergence theory for empirical expected-signature estimators from single-path data (single realizations of potentially multi-dimensional stochastic processes) under segment-stationarity (shift-invariant path segments with exponentially decaying serial dependence) and applies it to parameter calibration of two-dimensional Ornstein-Uhlenbeck processes. The main result establishes finite-sample mean-squared-error convergence at rate **O(N^{-2/p})** where N controls block size and p > 2 denotes path regularity. Through systematic hyperparameter optimization, signature methods achieve **10-32% accuracy improvements** over optimally-tuned Batched MLE in slow mean-reversion regimes while maintaining **9-15% computational speedups**.
 
-## Empirical Performance Results
+## Empirical Performance Results in Parameter Calibration
 *Signature methods vs. optimally-tuned Batched MLE with hyperparameter optimization*
 
 | Parameter Regime | Signature Improvement | Computational Speedup | Statistical Significance |
