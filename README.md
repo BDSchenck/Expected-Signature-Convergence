@@ -7,7 +7,7 @@
 This repository contains the complete implementation and experimental validation for a thesis that establishes the first rigorous convergence theory for empirical expected-signature estimators from serially dependent single-path data, with applications to financial parameter calibration.
 
 **[Full Thesis PDF (65 pages)](./Schenck-2025-Expected-Signature-Convergence-Theory.pdf)**  
-**[Presentation](./beamer.pdf)**
+**[Presentation PDF (37 pages)](./beamer.pdf)**
 
 ## Overview
 
